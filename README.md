@@ -8,6 +8,8 @@ In the project directory, you can run:
 ### `npm i`
 This command will install all the node modules required by this project.
 
+### `json-server --watch src/Data/db.json --port 8000`
+This command will beTT used to run json server or to create Json db
 
 ### `npm start`
 
