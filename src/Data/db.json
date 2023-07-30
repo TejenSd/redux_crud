@@ -6,6 +6,34 @@
       "role": "Admin",
       "email": "admin@gmail.com",
       "phone": "9876543210"
+    },
+    {
+      "id": 2,
+      "name": "Admin User2",
+      "role": "Admin2",
+      "email": "admin2@gmail.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": 3,
+      "name": "Admin User3",
+      "role": "Admin3",
+      "email": "admin3@gmail.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": 4,
+      "name": "Admin User4",
+      "role": "Admin4",
+      "email": "admin4@gmail.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": 5,
+      "name": "Admin User 5",
+      "role": "Admin5",
+      "email": "admin5@gmail.com",
+      "phone": "9876543210"
     }
   ]
 }
