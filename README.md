@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Simple React CRUD Operation using React and JSON Server
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
