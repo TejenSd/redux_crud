@@ -1,5 +1,6 @@
 import axios from "axios"
-import { FAIL_REQUEST, GET_USER_LIST, MAKE_REQUEST } from "./ActionType"
+import { ADD_USER, DELETE_USER, FAIL_REQUEST, GET_USER_LIST, MAKE_REQUEST } from "./ActionType"
+import { toast } from "react-toastify"
 
 export const makeRequest = () => {
     return {
@@ -18,6 +19,17 @@ export const getUserList = (data) => {
         payload: data
     }
 }
+export const deleteUser = () => {
+    return {
+        type: DELETE_USER
+    }
+}
+
+export const addUser = () => {
+    return {
+        type: ADD_USER
+    }
+}
 
 export const FetchUserList = () => {
     return (dispatch) => {
@@ -31,4 +43,29 @@ export const FetchUserList = () => {
 
     }
 }
+
+export const RemoveUser = (code) => {
+    return (dispatch) => {
+        dispatch(makeRequest());
+        axios.delete('http://localhost:8000/user/'+code).then(res => {
+            dispatch(deleteUser()); 
+        }).catch(err => {
+            dispatch(failRequest(err.message))
+        })
+
+    }
+}
+
+export const FunctionAddUser = (data) => {
+    return (dispatch) => {
+        dispatch(makeRequest());
+        axios.post('http://localhost:8000/user',data).then(res => {
+            dispatch(addUser());
+            toast.success('User Added Successfully')
+        }).catch(err => {
+            dispatch(failRequest(err.message))
+        })
+    }
+}
+
 

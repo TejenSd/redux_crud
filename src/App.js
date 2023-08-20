@@ -33,7 +33,7 @@ function App() {
           <Route path='/user/edit/:code' element={<UpdateUser></UpdateUser>}></Route>
         </Routes>
       </BrowserRouter>
-      <ToastContainer></ToastContainer>
+      <ToastContainer className="toast-position" position="bottom-right"></ToastContainer>
     </div>
     </Provider>
   );
