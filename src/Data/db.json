@@ -2,31 +2,31 @@
   "user": [
     {
       "id": 1,
-      "name": "Admin User",
-      "role": "Admin",
-      "email": "admin@gmail.com",
-      "phone": "9876543210"
+      "name": "Ramesh",
+      "email": "tejenderdanu46@gmail.com",
+      "phone": "08958443746",
+      "role": "Admin"
     },
     {
       "name": "Tejendra Singh Danu",
       "email": "tejenderdanu46@gmail.com",
       "phone": "08958443746",
-      "role": "Admin",
-      "id": 3
+      "role": "Staff",
+      "id": 2
     },
     {
-      "name": "Tejendra Singh",
+      "name": "Tejendra Singh Danu",
       "email": "tejenderdanu46@gmail.com",
       "phone": "08958443746",
       "role": "Staff",
-      "id": 4
+      "id": 2
     },
     {
-      "name": "Tejendra Singh",
+      "name": "Tejendra Singh Danu",
       "email": "tejenderdanu46@gmail.com",
       "phone": "08958443746",
       "role": "Staff",
-      "id": 5
+      "id": 2
     }
   ]
 }

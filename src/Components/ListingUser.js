@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { FetchUserList, RemoveUser } from "../Redux/Action";
+import { FetchUserList, Removeuser } from "../Redux/Action";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -9,11 +9,11 @@ const ListingUser = (props) => {
         props.loaduser();
     }, [])
     const handledelete = (code) => {
-        if(window.confirm('Are you sure to delete?')){
-            props.RemoveUser(code);
-            toast.success("User Deleted Successfully");
+        if(window.confirm('Are you sure to delete?'))
+        {
+            props.removeuser(code);
             props.loaduser();
-            
+            toast.success("User Deleted Successfully");
         }
     }
     
@@ -71,7 +71,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         loaduser: () => dispatch(FetchUserList()),
-        RemoveUser:(code) => dispatch(RemoveUser(code))
+        removeuser:(code) => dispatch(Removeuser(code))
     }
 }
 

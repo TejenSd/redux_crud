@@ -1,7 +1,6 @@
 import axios from "axios"
 import { ADD_USER, DELETE_USER, FAIL_REQUEST, GET_USER_LIST, GET_USER_OBJ, MAKE_REQUEST, UPDATE_USER } from "./ActionType"
 import { toast } from "react-toastify"
-import UpdateUser from "../Components/UpdateUser"
 
 export const makeRequest = () => {
     return {
@@ -11,7 +10,7 @@ export const makeRequest = () => {
 export const failRequest = (err) => {
     return {
         type: FAIL_REQUEST,
-        payload:err
+        payload: err
     }
 }
 export const getUserList = (data) => {
@@ -58,22 +57,32 @@ export const FetchUserList = () => {
     }
 }
 
-export const RemoveUser = (code) => {
+// export const RemoveUser = (code) => {
+//     return (dispatch) => {
+//         dispatch(makeRequest());
+//         axios.delete('http://localhost:8000/user/' + code).then(res => {
+//             dispatch(deleteUser());
+//         }).catch(err => {
+//             dispatch(failRequest(err.message))
+//         })
+
+//     }
+// }
+export const Removeuser = (code) => {
     return (dispatch) => {
         dispatch(makeRequest());
-        axios.delete('http://localhost:8000/user/'+code).then(res => {
-            dispatch(deleteUser()); 
+        axios.delete('http://localhost:8000/user/' + code).then(res => {
+            dispatch(deleteUser());
         }).catch(err => {
             dispatch(failRequest(err.message))
         })
-
     }
 }
 
 export const FunctionAddUser = (data) => {
     return (dispatch) => {
         dispatch(makeRequest());
-        axios.post('http://localhost:8000/user',data).then(res => {
+        axios.post('http://localhost:8000/user', data).then(res => {
             dispatch(addUser());
             toast.success('User Added Successfully')
         }).catch(err => {
@@ -82,11 +91,11 @@ export const FunctionAddUser = (data) => {
     }
 }
 
-export const FunctionUpdateUser = (data,code) => {
+export const FunctionUpdateUser = (data, code) => {
     return (dispatch) => {
         dispatch(makeRequest());
-        axios.put('http://localhost:8000/user/'+code,data).then(res => {
-            dispatch(UpdateUser());
+        axios.put('http://localhost:8000/user/' + code, data).then(res => {
+            dispatch(updateUser());
             toast.success('User Updated Successfully')
         }).catch(err => {
             dispatch(failRequest(err.message))
@@ -97,7 +106,7 @@ export const FunctionUpdateUser = (data,code) => {
 export const FetchUserObj = (code) => {
     return (dispatch) => {
         dispatch(makeRequest());
-        axios.get('http://localhost:8000/user/'+code).then(res => {
+        axios.get('http://localhost:8000/user/' + code).then(res => {
             const userlist = res.data;
             dispatch(getUserObj(userlist));
         }).catch(err => {

@@ -35,7 +35,7 @@ export const Reducer = (state = initialState, action) => {
         case ADD_USER:
             return {
                 ...state,
-                loading: false
+                loading:false
             }
         case UPDATE_USER:
             return{
@@ -45,6 +45,7 @@ export const Reducer = (state = initialState, action) => {
             case GET_USER_OBJ:
                 return{
                     ...state,
+                    loading:false,
                     userObj: action.payload
                 }
         default: return state

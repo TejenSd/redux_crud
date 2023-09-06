@@ -18,7 +18,7 @@ const UpdateUser = () => {
     const handlesubmit = (e) => {
         e.preventDefault();
         const useObj = { id, name, email, phone, role };
-        dispatch(FunctionUpdateUser(useObj));
+        dispatch(FunctionUpdateUser(useObj,id));
         // console.log(useObj);
         navigate('/user');
     };
@@ -50,31 +50,31 @@ const UpdateUser = () => {
                         <div className="col-lg-12">
                             <div className="form-group">
                                 <label>Id</label>
-                                <input value={id} disabled="diabled" className="form-control" placeholder="Enter Name" />
+                                <input value={id || ''} disabled="disabled" className="form-control" placeholder="Enter Name" />
                             </div>
                         </div>
                         <div className="col-lg-12">
                             <div className="form-group">
                                 <label>Name</label>
-                                <input value={name} onChange={(e) => nameChange(e.target.value)} className="form-control" placeholder="Enter Name" />
+                                <input value={name || ''} onChange={(e) => nameChange(e.target.value)} className="form-control" placeholder="Enter Name" />
                             </div>
                         </div>
                         <div className="col-lg-12">
                             <div className="form-group">
                                 <label>Email</label>
-                                <input value={email} onChange={(e) => emailChnage(e.target.value)} className="form-control" placeholder="Enter Email" />
+                                <input value={email || ''} onChange={(e) => emailChnage(e.target.value)} className="form-control" placeholder="Enter Email" />
                             </div>
                         </div>
                         <div className="col-lg-12">
                             <div className="form-group">
                                 <label>Phone</label>
-                                <input value={phone} onChange={(e) => phoneChange(e.target.value)} className="form-control" placeholder="Enter Phone" />
+                                <input value={phone || ''} onChange={(e) => phoneChange(e.target.value)} className="form-control" placeholder="Enter Phone" />
                             </div>
                         </div>
                         <div className="col-lg-12">
                             <div className="form-group">
                                 <label>Role</label>
-                                <select value={role} onChange={(e) => roleChange(e.target.value)} className="form-control">
+                                <select value={role || ''} onChange={(e) => roleChange(e.target.value)} className="form-control">
                                     <option>Please Select</option>
                                     <option>Admin</option>
                                     <option>Staff</option>
