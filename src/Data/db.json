@@ -3,30 +3,30 @@
     {
       "id": 1,
       "name": "Ramesh",
-      "email": "tejenderdanu46@gmail.com",
-      "phone": "08958443746",
+      "email": "Ramesh123@gmail.com",
+      "phone": "9999999999",
       "role": "Admin"
     },
     {
-      "name": "Tejendra Singh Danu",
-      "email": "tejenderdanu46@gmail.com",
-      "phone": "08958443746",
+      "name": "Suresh",
+      "email": "Suresh@gmail.com",
+      "phone": "9999999999",
       "role": "Staff",
       "id": 2
     },
     {
-      "name": "Tejendra Singh Danu",
-      "email": "tejenderdanu46@gmail.com",
-      "phone": "08958443746",
+      "name": "Jack",
+      "email": "Jack@gmail.com",
+      "phone": "9999999999",
       "role": "Staff",
-      "id": 2
+      "id": 3
     },
     {
-      "name": "Tejendra Singh Danu",
-      "email": "tejenderdanu46@gmail.com",
-      "phone": "08958443746",
-      "role": "Staff",
-      "id": 2
+      "id": 4,
+      "name": "Daniel Gabriel",
+      "email": "Daniel@gmail.com",
+      "phone": "999999999",
+      "role": "Staff"
     }
   ]
 }
